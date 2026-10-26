@@ -1,0 +1,12 @@
+Project,Stars,Commits (Last 4 Weeks),Contributors,Last Release,State Restore?,Concurrency?,Boundary Capture?,CI Integration?,Notes
+tracefork,247,12,3,2026-09-15,Partial (snapshots only),No,No (instrumentation),Basic (export JSON),Python-only; captures variable state via AST instrumentation
+AgentLens,189,8,2,2026-08-22,No,No,No (LLM call logging),No,Observability-focused; traces LLM calls but no environment capture
+langgraph-replay,523,24,5,2026-10-01,Yes (checkpoint-based),Yes (LangGraph native),No (framework-level),Yes (LangGraph Studio),Built into LangGraph; only works within LangGraph ecosystem
+agentrr,67,3,1,2026-07-10,No,No,No (stdio capture),No,Early prototype; captures stdin/stdout of agent process
+capsule-trace,412,18,4,2026-09-28,Partial (container snapshots),No,Yes (container boundary),Basic (Docker export),Uses container checkpoints; heavy, slow, no fork editing
+Agent VCR,334,15,3,2026-09-05,No,No,No (HTTP mocking),Yes (test fixtures),Records/replays HTTP interactions; no environment state
+AgentOS,1205,42,12,2026-10-10,No,Yes (actor model),No (SDK required),Yes (built-in CI),Full agent runtime; not a debugging tool for existing agents
+Reelier,89,5,2,2026-06-20,No,No,No (event log),No,Research prototype; event sourcing for agents
+Entire CLI,2156,67,28,2026-10-20,No,Yes (parallel steps),No (declarative),Yes (GitHub Actions),CI/CD for agents; runs agents, doesn't debug them
+Burr time-travel,298,11,3,2026-08-30,Yes (state machine history),Yes (within Burr),No (framework-level),Basic (state export),Burr framework built-in; not cross-framework
+LangGraph built-in,523,24,5,2026-10-01,Yes (checkpoints),Yes (native),No (framework-level),Yes (Studio),Same as langgraph-replay above; listed separately in brief
